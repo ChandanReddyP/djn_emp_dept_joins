@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>equi_joins</h1>
+        <table border="3px">
+
+            <tr>
+                <th>emp_no</th>
+                <th>emp_name</th>
+                <th>salary</th>
+                <th>comm</th>
+                <th>manager</th>
+                <th>dept_no</th>
+                <th>dept_name</th>
+                <th>dloc</th>
+            </tr>
+
+            {% for emo in LEDO %}
+            <tr>
+                <td>{{emo.emp_no}}</td>
+                <td>{{emo.emp_name}}</td>
+                <td>{{emo.salary}}</td>
+                <td>{{emo.comm}}</td>
+                <td>{{emo.mgr}}</td>
+                <td>{{emo.dept_no.dept_no}}</td>
+                <td>{{emo.dept_no.dept_name}}</td>
+                <td>{{emo.dept_no.dloc}}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </center>
+</body>
+</html>

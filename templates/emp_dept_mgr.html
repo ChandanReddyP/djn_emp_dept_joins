@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee_Dept_Mgr</title>
+</head>
+<body>
+    <center>
+        <h1>emp_dept_mgr</h1>
+
+        <table border="3px">
+            <tr>
+                <th>Employee Name</th>
+                <th>department Name</th>
+                <th>Manager Name</th>
+            </tr>
+            {% for edmo in LEDMO %}
+            <tr>
+                <td>{{edmo.emp_name}}</td>
+                <td>{{edmo.dept_no.dept_name}}</td>
+                <td>{{edmo.mgr.emp_name}}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </center>
+</body>
+</html>
